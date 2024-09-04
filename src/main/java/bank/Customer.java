@@ -5,14 +5,16 @@ public class Customer {
   private String name;
   private String username;
   private String password;
-  private String accountId;
+  private int accountId;
+  private boolean accountverified = false;
 
-  public Customer(int id, String name, String username, String password, String accoundId){
+  public Customer(int id, String name, String username, String password, int accoundId){
     setId(id);
     setName(name);
     setUsername(username);
     setPassword(password);
     setAccountId(accoundId);
+    setAccountverified(false);
   }
 
   public int getId() {
@@ -47,12 +49,21 @@ public class Customer {
     this.password = password;
   }
 
-  public String getAccountId() {
+  public int getAccountId() {
     return this.accountId;
   }
 
-  public void setAccountId(String accountId) {
+  public void setAccountId(int accountId) {
     this.accountId = accountId;
+  }
+
+
+  public boolean isAccountverified() {
+    return this.accountverified;
+  }
+
+  public void setAccountverified(boolean accountverified) {
+    this.accountverified = accountverified;
   }
   
 }
